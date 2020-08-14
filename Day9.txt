@@ -1,0 +1,79 @@
+Day9 Assignment
+-------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Row 1 navbar-->
+        <div class="row bg-primary align-items-center text-light justify-content-between sticky-top"
+            style="height:15vh;">
+            <div class="col-6 " style="font-size:2rem ;">
+                DAC_20
+            </div>
+            <div class="col-3 d-flex justify-content-end" style="font-size:1rem" ;>
+                Log out
+            </div>
+        </div>
+
+        <!--Row 2-->
+        <div class=" row justify-content-center mt-1">
+            <div class="col-6 bg-success text-light rounded " style="height: 300px;">
+                <img src="https://picsum.photos/600/600"" style=" height: 100%;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+        <!--Row 3-->
+        <div class="row justify-content-center mt-1">
+            <div class="col-6 bg-success text-light rounded " style="height: 300px;">
+                <img src="https://picsum.photos/id/2/600/600" style="height: 100%;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+        <!--Row 4-->
+        <div class="row justify-content-center mt-1">
+            <div class="col-6 bg-success text-light rounded " style="height: 300px;">
+                <img src="https://picsum.photos/id/4/600/600" style="height: 100%;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+        <!--Row 5-->
+        <div class="row justify-content-center mt-1">
+            <div class="col-6 bg-success text-light rounded " style="height: 300px;">
+                <img src="https://picsum.photos/id/5/600/600" style="height: 100%;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+        <!--Row 6-->
+        <div class="row justify-content-center mt-1">
+            <div class="col-6 bg-success text-light rounded " style="height: 300px;">
+                <img src="https://picsum.photos/id/7/600/600" style="height: 100%;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+        <!--Row 7-->
+        <div class="row justify-content-center mt-1">
+            <div class="col-6 bg-success text-light rounded " style="height: 300px;">
+                <img src="https://picsum.photos/id/6/600/600" style="height: 100%;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+        <!--Row 8-->
+        <div class="row justify-content-center mt-1">
+            <div class="col-6 bg-success text-light rounded " style="height: 300px;">
+                <img src="https://picsum.photos/id/2/600/600" style="height: 100%;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
