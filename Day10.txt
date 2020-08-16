@@ -1,0 +1,149 @@
+Day10 Assignment
+------------------------------------------------------------------------------------------------------------------
+<!--HTML-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="p2.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Row 1 NavBar-->
+        <div class="row bg-primary text-light justify-content-between align-items-center" style="height:80px">
+            <div class="col-6 ">
+                DAC_20
+            </div>
+            <div class="col-6  d-flex justify-content-end">
+                log out
+            </div>
+        </div>
+        <!--Row 2 chatbox-->
+        <div class="row  mt-1 justify-content-center" id="main-row">
+            <div class="col-10 col-md-6  bg-success ">
+                <div class="row bg-light d-flex align-items-center justify-content-center text-light"
+                    style="height: 150px;">
+                    <div class="col-4 col-md-2 bg-success ">
+                        Logo
+                    </div>
+                    <div class="col-12 col-md-8 bg-light  d-flex ">
+                        <input class="form-control rounded-pill mr-1" type="text" placeholder="Type here"
+                            style="width:25vw; ">
+                        <button type="button" class="btn btn-primary  rounded-pill"
+                            onclick="commenthere(this)">Comment</button>
+                    </div>
+                    <div class="col-4 col-md-2 bg-success">
+                        Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment row-->
+        <div class="row justify-content-center rounded-pill   align-items-center mt-1" id="cmtrow1">
+            <div class="col-6 bg-black rounded border border-primary" style="height: 90px;">
+                <div class="row mb-3 d-flex text-success justify-content-between ">
+                    <div class=" col-12 p-0 d-flex justify-content-center">
+                        sample comment
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="height:30px;">
+                    <div class="col-2">
+                        <button class="btn btn-sm btn-primary " onclick="likehere(this)">Like <span>0</span></button>
+                    </div>
+                    <div class=" col-2">
+                        <button class="btn btn-sm btn-primary " onclick="dislikehere(this)">Dislike
+                            <span>0</span></button>
+                    </div>
+                    <div class=" col-2">
+                        <button class="btn btn-sm btn-primary" onclick="deletehere(this)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Comment row-->
+        <div class="row justify-content-center rounded-pill   align-items-center mt-1" id="cmtrow1">
+            <div class="col-6 bg-light rounded border border-primary" style="height: 90px;">
+                <div class="row mb-3 d-flex  justify-content-between ">
+                    <div class=" col-12 p-0 d-flex justify-content-center">
+                        sample comment
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="height:30px;">
+                    <div class="col-2">
+                        <button class="btn btn-sm btn-primary " onclick="likehere(this)">Like <span>0</span></button>
+                    </div>
+                    <div class=" col-2">
+                        <button class="btn btn-sm btn-primary " onclick="dislikehere(this)">Dislike <span>
+                                0</span></button>
+                    </div>
+                    <div class=" col-2">
+                        <button class="btn btn-sm btn-primary" onclick="deletehere(this)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--JS code-->
+let commenthere = (newElement) => {
+    //newElement = document.querySelector('#main-row').children[0].children[0].children[1].children[0].value;
+    console.log(newElement);
+    //document.querySelector('#cmtrow').children[0].children[0].children[0] = newElement;
+    //newElement1.parentElement.parentElement.parentElement.parentElement.nextElementSibling;
+
+    //let inputcmt = newElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[0].children[0].value;
+    let inputcmt = newElement.parentElement.children[0].value;
+    console.log(inputcmt);
+
+    let commentbox = newElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[0];
+    console.log("commentbox" + commentbox);
+
+    let commentbox1 = commentbox.cloneNode(true);
+    console.log("commentbox1" + commentbox1);
+
+    commentbox1.appendChild(commentbox);
+
+    commentbox1.children[0].children[0].innerHTML = inputcmt;
+    console.log(commentbox1.children[0].children[0].innerHTML);
+
+}
+
+let likehere = (newElement1) => {
+
+    //likecounter string
+    let lkcountstr = newElement1.children[0].innerHTML;
+    //parse it
+    let likecount = parseInt(lkcountstr);
+
+    likecount += 1;
+
+    newElement1.children[0].innerHTML = likecount;
+}
+
+function dislikehere(newElement2) {
+    let disstring = newElement2.children[0].innerHTML;
+
+    let dilikecount = parseInt(disstring);
+
+    dilikecount++;
+
+    newElement2.children[0].innerHTML = dilikecount;
+}
+
+let deletehere = function (newElement3) {
+    alert('confirm delete')
+    newElement3.parentElement.parentElement.parentElement.parentElement.remove();
+}
